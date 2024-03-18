@@ -21,71 +21,74 @@ Serving the HTML pages.
 Testing the webserver.
 
 ## PROGRAM:
+```
 from http.server import HTTPServer,BaseHTTPRequestHandler
-
-content='''
-<!doctype html>
+content = """
+<!DOCTYPE html>
 <html>
-<head>
-<title> My Web Server</title>
-</head>
-<body>
-<h1>Top Five Revenue from Companies</h1>
-<table border=2>
-<tr>
-<th> Company Name</th>
-<th> Revenue</th>
-<th> Financial Year</th>
-</tr>
-
-<tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
-</tr>
-<tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
-</tr>
-<tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
-</tr>
-<tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
-</tr>
-<tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
-</tr>
-<tr>
-<td> Micro Soft</td>
-<td> $86.6</td>
-<td> 2014</td>
-</tr>
-</table>
-</body>
+     <title> Image Map </title>
+     <body>
+          <table border = "2" cellspacing = "10" cellpading = "6">
+               <caption> Top five revenue generating software companies</caption>
+               <tr>
+                    <th>Rank</th>
+                    <th>Company</th>
+                    <th>Revenue</th>
+                    <th>FY</th>
+               </tr>
+               <tr>
+                    <td>1</td>
+                    <td>Microsoft</td>
+                    <td>$86.8</td>
+                    <td>2014</td>
+               </tr>
+               <tr>
+                    <td>2</td>
+                    <td>Oracle</td>
+                    <td>$37.1</td>
+                    <td>2013</td>
+               </tr>
+               <tr>
+                    <td>3</td>
+                    <td>SAP</td>
+                    <td>$20.9</td>
+                    <td>2013</td>
+               </tr>
+               <tr>
+                    <td>4</td>
+                    <td>Symantec</td>
+                    <td>$6.8</td>
+                    <td>2013</td>
+               </tr>
+               <tr>
+                    <td>5</td>
+                    <td>VMware</td>
+                    <td>$5.2  </td>
+                    <td>2013</td>
+               </tr> 
+          </table>
+     </body>
 </html>
-'''
 
-class MyServer(BaseHTTPRequestHandler):
+"""
+class myhandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        print("Get request received...")
-        self.send_response(200) 
-        self.send_header("content-type", "text/html")       
+        print("request received")
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charset=utf-8')
         self.end_headers()
         self.wfile.write(content.encode())
-
-print("This is my webserver") 
-server_address =('',8000)
-httpd = HTTPServer(server_address,MyServer)
+server_address = ('',8000)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
 httpd.serve_forever()
+```
+
 ## OUTPUT:
+![313065073-e9b9027c-5bd2-465b-b3a5-ec274f38530c](https://github.com/ezhilan6927/simplewebserver/assets/160242249/57f68c11-7b07-4b40-9185-427917c01fa4
+![313065118-d11407b9-6036-45b0-8173-8dbf9c912bfa](https://github.com/ezhilan6927/simplewebserver/assets/160242249/ffd09ef8-b0fe-4900-bb4a-dd8f29baf821)
+
+
 
 
 ## RESULT:
