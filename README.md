@@ -85,9 +85,8 @@ httpd.serve_forever()
 ```
 
 ## OUTPUT:
-
-
-
+![Screenshot (6)](https://github.com/ezhilan6927/simplewebserver/assets/160242249/8bac223d-3ead-4179-927b-5baa77c2a20e)
+![313065118-d11407b9-6036-45b0-8173-8dbf9c912bfa](https://github.com/ezhilan6927/simplewebserver/assets/160242249/0bbb155f-f745-4974-98c6-5ca05e53f620)
 
 
 ## RESULT:
