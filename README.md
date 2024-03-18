@@ -86,9 +86,6 @@ server_address =('',8000)
 httpd = HTTPServer(server_address,MyServer)
 httpd.serve_forever()
 ## OUTPUT:
-![Screenshot 2024-03-15 091437](https://github.com/Hariniii21/simplewebserver/assets/147140423/e9b9027c-5bd2-465b-b3a5-ec274f38530c)
-![Screenshot 2024-03-15 091525](https://github.com/Hariniii21/simplewebserver/assets/147140423/d11407b9-6036-45b0-8173-8dbf9c912bfa)
-
 
 
 ## RESULT:
